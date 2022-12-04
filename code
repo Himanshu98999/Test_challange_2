@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "Enter the name" echo "\n"
+read INSTANCE-NAME
+echo "Enter the metadata key"
+echo "\n"
+read KEY
+metadata-value=$(gcloud compute instances describe $INSTANCE-NAME-format=json(metadata.items $KEY)') 
+echo $metadata-value
